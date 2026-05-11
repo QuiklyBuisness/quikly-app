@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { createClient } from '@/lib/supabase'
+import { createClient } from '@/lib/supabase-server'
 import { Job, Profile, SKILLS } from '@/types'
 import { Button } from '@/components/ui/Button'
 import { JobCard } from '@/components/shared/JobCard'
