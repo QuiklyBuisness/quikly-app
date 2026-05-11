@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0f0f0f;
+  --surface: #1a1a1a;
+  --surface2: #222222;
+  --border: rgba(255,255,255,.1);
+  --text: #ffffff;
+  --text2: rgba(255,255,255,.55);
+  --text3: rgba(255,255,255,.3);
+  --green: #22c55e;
+  --amber: #f59e0b;
+  --red: #ef4444;
+  --font-inter: 'Inter', -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-inter);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+/* Scroll utility */
+.scroll-area { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.scroll-area::-webkit-scrollbar { display: none; }
+
+/* Pulse animation for online dot */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.pulse { animation: pulse-dot 2s ease infinite; }
+
+/* Ripple for go-online */
+@keyframes ripple-out {
+  0% { transform: scale(0); opacity: 0.5; }
+  100% { transform: scale(5); opacity: 0; }
+}
+
+/* Slide up for sheets */
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+.sheet-enter { animation: slide-up 0.3s cubic-bezier(0.22,1,0.36,1); }
+
+/* Job incoming overlay */
+@keyframes overlay-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+.overlay-enter { animation: overlay-in 0.3s cubic-bezier(0.22,1,0.36,1); }
+
+/* Timer shrink */
+@keyframes timer-shrink {
+  from { width: 100%; }
+  to { width: 0%; }
+}
