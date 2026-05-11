@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { createClient } from '@/lib/supabase-server'
+import { createClient } from '@/lib/supabase'
 import { Job, Profile } from '@/types'
 import { Button } from '@/components/ui/Button'
 import { GoOnlineOverlay } from '@/components/worker/GoOnlineOverlay'
